@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e4826eba-5589-4742-b2c0-5c91831df035}</ProjectGuid>
+    <RootNamespace>gameengine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\third_party;$(ProjectDir)src\first_party</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\third_party;$(ProjectDir)src\first_party</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\SDL_image;$(ProjectDir)\SDL_ttf;$(ProjectDir)\SDL_mixer;$(ProjectDir)\SDL2;$(ProjectDir)src\third_party\glm;$(ProjectDir)src\third_party;$(ProjectDir)src\third_party\rapidjson;$(ProjectDir)src\first_party;$(ProjectDir)src\third_party\lua;$(ProjectDir)src\third_party\spine;$(ProjectDir)src\third_party\dragonBones;$(ProjectDir)src\third_party\dragonBones\SDL</AdditionalIncludeDirectories>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)\SDL_mixer\lib;$(ProjectDir)\SDL_ttf\lib;$(ProjectDir)\SDL_image\lib;$(ProjectDir)\SDL2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)\SDL2\lib\*.dll" "$(OutDir)"
+copy /Y "$(ProjectDir)\SDL_image\lib\*.dll" "$(OutDir)"
+copy /Y "$(ProjectDir)\SDL_ttf\lib\*.dll" "$(OutDir)"
+copy /Y "$(ProjectDir)\SDL_mixer\lib\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\SDL_image;$(ProjectDir)\SDL_ttf;$(ProjectDir)\SDL_mixer;$(ProjectDir)\SDL2;$(ProjectDir)src\third_party\glm;$(ProjectDir)src\third_party;$(ProjectDir)src\third_party\rapidjson;$(ProjectDir)src\first_party;$(ProjectDir)src\third_party\lua;$(ProjectDir)src\third_party\spine;$(ProjectDir)src\third_party\dragonBones;$(ProjectDir)src\third_party\dragonBones\SDL</AdditionalIncludeDirectories>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)\SDL_mixer\lib;$(ProjectDir)\SDL_ttf\lib;$(ProjectDir)\SDL_image\lib;$(ProjectDir)\SDL2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y "$(ProjectDir)\SDL2\lib\*.dll" "$(OutDir)"
+copy /Y "$(ProjectDir)\SDL_image\lib\*.dll" "$(OutDir)"
+copy /Y "$(ProjectDir)\SDL_ttf\lib\*.dll" "$(OutDir)"
+copy /Y "$(ProjectDir)\SDL_mixer\lib\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\first_party\DragonBonesDB.cpp" />
+    <ClCompile Include="src\first_party\SpineDB.cpp" />
+    <ClCompile Include="src\first_party\Actor.cpp" />
+    <ClCompile Include="src\first_party\ComponentDB.cpp" />
+    <ClCompile Include="src\first_party\Physics.cpp" />
+    <ClCompile Include="src\first_party\Input.cpp" />
+    <ClCompile Include="src\first_party\AudioDB.cpp" />
+    <ClCompile Include="src\first_party\ImageDB.cpp" />
+    <ClCompile Include="src\first_party\Renderer.cpp" />
+    <ClCompile Include="src\first_party\SceneDB.cpp" />
+    <ClCompile Include="src\first_party\FileUtils.cpp" />
+    <ClCompile Include="src\first_party\Config.cpp" />
+    <ClCompile Include="src\first_party\Engine.cpp" />
+    <ClCompile Include="src\first_party\main.cpp" />
+    <ClCompile Include="src\first_party\TemplateDB.cpp" />
+    <ClCompile Include="src\first_party\TextDB.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\animation\Animation.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\animation\AnimationState.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\animation\BaseTimelineState.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\animation\TimelineState.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\animation\WorldClock.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\armature\Armature.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\armature\Bone.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\armature\Constraint.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\armature\DeformVertices.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\armature\Slot.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\armature\TransformObject.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\core\BaseObject.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\core\DragonBones.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\event\EventObject.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\factory\BaseFactory.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\geom\Point.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\geom\Transform.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\AnimationConfig.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\AnimationData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\ArmatureData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\BoundingBoxData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\CanvasData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\ConstraintData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\DisplayData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\DragonBonesData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\SkinData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\TextureAtlasData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\model\UserData.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\parser\BinaryDataParser.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\parser\DataParser.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\parser\JSONDataParser.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\SDL\SDLArmatureDisplay.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\SDL\SDLArmatureProxy.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\SDL\SDLFactory.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\SDL\SDLSlot.cpp" />
+    <ClCompile Include="src\third_party\dragonBones\SDL\SDLTextureAtlasData.cpp" />
+    <ClCompile Include="src\third_party\lua\lapi.c" />
+    <ClCompile Include="src\third_party\lua\lauxlib.c" />
+    <ClCompile Include="src\third_party\lua\lbaselib.c" />
+    <ClCompile Include="src\third_party\lua\lcode.c" />
+    <ClCompile Include="src\third_party\lua\lcorolib.c" />
+    <ClCompile Include="src\third_party\lua\lctype.c" />
+    <ClCompile Include="src\third_party\lua\ldblib.c" />
+    <ClCompile Include="src\third_party\lua\ldebug.c" />
+    <ClCompile Include="src\third_party\lua\ldo.c" />
+    <ClCompile Include="src\third_party\lua\ldump.c" />
+    <ClCompile Include="src\third_party\lua\lfunc.c" />
+    <ClCompile Include="src\third_party\lua\lgc.c" />
+    <ClCompile Include="src\third_party\lua\linit.c" />
+    <ClCompile Include="src\third_party\lua\liolib.c" />
+    <ClCompile Include="src\third_party\lua\llex.c" />
+    <ClCompile Include="src\third_party\lua\lmathlib.c" />
+    <ClCompile Include="src\third_party\lua\lmem.c" />
+    <ClCompile Include="src\third_party\lua\loadlib.c" />
+    <ClCompile Include="src\third_party\lua\lobject.c" />
+    <ClCompile Include="src\third_party\lua\lopcodes.c" />
+    <ClCompile Include="src\third_party\lua\loslib.c" />
+    <ClCompile Include="src\third_party\lua\lparser.c" />
+    <ClCompile Include="src\third_party\lua\lstate.c" />
+    <ClCompile Include="src\third_party\lua\lstring.c" />
+    <ClCompile Include="src\third_party\lua\lstrlib.c" />
+    <ClCompile Include="src\third_party\lua\ltable.c" />
+    <ClCompile Include="src\third_party\lua\ltablib.c" />
+    <ClCompile Include="src\third_party\lua\ltm.c" />
+    <ClCompile Include="src\third_party\lua\lundump.c" />
+    <ClCompile Include="src\third_party\lua\lutf8lib.c" />
+    <ClCompile Include="src\third_party\lua\lvm.c" />
+    <ClCompile Include="src\third_party\lua\lzio.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\first_party\DragonBonesDB.h" />
+    <ClInclude Include="src\first_party\SpineDB.h" />
+    <ClInclude Include="src\first_party\Colors.h" />
+    <ClInclude Include="src\first_party\ComponentDB.h" />
+    <ClInclude Include="src\first_party\keycode_to_scancode.h" />
+    <ClInclude Include="src\first_party\Physics.h" />
+    <ClInclude Include="src\first_party\Input.h" />
+    <ClInclude Include="src\first_party\AudioDB.h" />
+    <ClInclude Include="src\first_party\AudioHelper.h" />
+    <ClInclude Include="src\first_party\Engine.h" />
+    <ClInclude Include="src\first_party\Helper.h" />
+    <ClInclude Include="src\first_party\ImageDB.h" />
+    <ClInclude Include="src\first_party\PrintUtils.h" />
+    <ClInclude Include="src\first_party\Renderer.h" />
+    <ClInclude Include="src\first_party\SceneDB.h" />
+    <ClInclude Include="src\first_party\Actor.h" />
+    <ClInclude Include="src\first_party\FileUtils.h" />
+    <ClInclude Include="src\first_party\Render.h" />
+    <ClInclude Include="src\first_party\Config.h" />
+    <ClInclude Include="src\first_party\TemplateDB.h" />
+    <ClInclude Include="src\first_party\TextDB.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\scenes\level1.scene" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

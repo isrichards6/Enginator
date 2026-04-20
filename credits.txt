@@ -1,0 +1,11 @@
+Print.h from ai
+Engine.cpp from lecture 1/21
+isNeighbor() from ai
+Physics::CollisionCheck based on AABB snippet/tutorial at https://tutorialedge.net/gamedev/aabb-collision-detection-tutorial/
+IVecHash declaration from ai, formula refactored from project spec
+camera culling formula in Engine::DrawActors() based on code completion from IDE
+RenderData struct in Engine.cpp idea from ai 
+Actor::Load(), used ai for help learning how to communicate between c++ and lua since this was pretty tough for me. ended up following the general structure it recommended after failing a few times figuring it out on my own.
+SceneDB::RemoveActor() and ProcessPendingActorRemovals(), used ai for a refresher and reference on vector element deletion for pointers and shared pointers
+ImageDB.h ImageDrawRequest, from spec
+ImageDB::RenderAndClearAllImages based on my own implementation mixed with spec
